@@ -47,3 +47,5 @@ async function gotHouses() {
 };
 
 gotHouses();
+
+// SEE UPDATED CODE IN LESSON UPLOAD
