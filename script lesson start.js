@@ -37,13 +37,19 @@ async function gotHouses() {
     // Like navigating folders
     // Use ".word" to refer to specific keys
 
-    const gotCharacters = document.querySelector("#gotCharacters");
-    gotCharacters.innerHTML = `
-    <h1>${response["House Stark"]["Jon Snow"].nickname}</h1>
-    <h3>${response["House Stark"]["Jon Snow"].alias}</h3>
-    <p>${response["House Stark"]["Jon Snow"].title}</p>
-    `;
+    const houseStarkData = response["House Stark"];
+    console.log(houseStarkData);
+    // Set up variables that refer to specific data as needed
 
+    const jonSnow = houseStarkData["Jon Snow"];
+    console.log(jonSnow);
+
+    // Refer to data in other ways, make new arrays with data from json
+    const houses = {
+        houseStark: response["House Stark"],
+        houseTargaryen: response["Targaryen"]
+    };
+    console.log(houses);
 };
 
 gotHouses();
